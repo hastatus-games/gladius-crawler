@@ -15,10 +15,12 @@ public class Main {
 	
 
 	public static void main(String[] args) throws SQLException {
-		
+		System.out.println("Starting...");
 		Connection conn = ConnectionFactory.getConnection();		
-		try {			
+		try {
+			System.out.println("Executing crawlers");
 			executeCrawlers(conn);
+			System.out.println("Done.");
 		}
 		finally {
 							
